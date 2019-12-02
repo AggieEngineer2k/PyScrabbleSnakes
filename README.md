@@ -10,7 +10,7 @@ Download _twl06.txt_ from https://www.wordgamedictionary.com/twl06/.
 ## Usage example
 
 ```sh
-py PyScrabbleSnakes.py
+py PyScrabbleSnakes.py "c:/temp/twl06.txt" "c:/temp/scrabblesnakes.txt"
 ```
 
 ## Release History

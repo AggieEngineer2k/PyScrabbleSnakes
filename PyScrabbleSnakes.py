@@ -5,13 +5,20 @@
 #          (down to three letters).
 #   Notes: twl06.txt is available from
 #          https://www.wordgamedictionary.com/twl06/
+import argparse
+
+# Command-line arguments
+parser = argparse.ArgumentParser(description='Find some Scrabble snakes.')
+parser.add_argument('wordlist',help='path to a word list file')
+parser.add_argument('scrabblesnakes',help='path to the output file')
+args = parser.parse_args()
 
 # "Someone take this bag of snakes and lay them out straight."
 # - Dan Aykroyd, Evolution, 2001.
 def main():
 	# Initialize a set of 3+ letter words from a word list.
 	words = set()
-	with open("C:/Temp/twl06.txt", "r") as file:
+	with open(args.wordlist, "r") as file:
 		for word in file:
 			if len(word.strip()) >= 3:
 				words.add(word)
@@ -25,7 +32,7 @@ def main():
 	# Sort the snakes by length and then alphabetically, and then lay them out
 	# straight in a text file.
 	bag.sort(key=lambda snake: (-len(snake), snake))
-	with open("C:/Temp/scrabblesnakes.txt", "w") as file:
+	with open(args.scrabblesnakes, "w") as file:
 		file.writelines(bag)
 
 def isSnakeAlive(snake, words):
