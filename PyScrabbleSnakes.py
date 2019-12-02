@@ -1,4 +1,4 @@
-#    Name: PyScrabbleSnake.py
+#    Name: PyScrabbleSnakes.py
 #  Author: Justin L.  Brown
 # Purpose: Generate a list of Scrabble(TM) words whose successive substrings
 #          after removing the leading letter are also valid words
