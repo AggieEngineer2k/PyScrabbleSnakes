@@ -1,13 +1,5 @@
-#    Name: PyScrabbleSnakes.py
-#  Author: Justin L.  Brown
-# Purpose: Generate a list of Scrabble(TM) words whose successive substrings
-#          after removing the leading letter are also valid words
-#          (down to three letters).
-#   Notes: twl06.txt is available from
-#          https://www.wordgamedictionary.com/twl06/
+# Parse command-line arguments.
 import argparse
-
-# Command-line arguments
 parser = argparse.ArgumentParser(description='Find some Scrabble snakes.')
 parser.add_argument('wordlist',help='path to a word list file')
 parser.add_argument('scrabblesnakes',help='path to the output file')
