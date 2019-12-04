@@ -16,9 +16,9 @@ def main():
                 snakes[word] = None
 
     # Check every snake for life.
-    for key in list(snakes):
-        if snakes[key] is None:
-            snakes[key] = isSnakeAlive(key, snakes)
+    for snake in list(snakes):
+        if snakes[snake] is None:
+            snakes[snake] = isSnakeAlive(snake, snakes)
 
     # Put all the living snakes into a bag.
     bag = list({snake:isAlive for snake,isAlive in snakes.items() if isAlive == True})
@@ -34,7 +34,7 @@ def isSnakeAlive(snake, snakes):
     if snake not in snakes.keys():
         return False
     # Check a snake for life at most once.
-    elif snakes.get(snake) is None:    
+    elif snakes[snake] is None:
         # A snake is alive if it is three letters long.
         if len(snake.strip()) == 3:
             snakes[snake] = True
