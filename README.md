@@ -33,5 +33,7 @@ C:\> py PyScrabbleSnakes.py "c:/temp/twl06.txt" "c:/temp/scrabblesnakes.txt"
 
 ## Release History
 
+* 0.1.0
+    * Snakes are checked for life at most once.
 * 0.0.1
     * Work in progress
